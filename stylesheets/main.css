@@ -1,0 +1,229 @@
+/*@import url("http://serverapi.arcgisonline.com/jsapi/arcgis/3.3/js/dojo/dijit/themes/claro/claro.css");
+@import url("http://serverapi.arcgisonline.com/jsapi/arcgis/3.3/js/esri/css/esri.css")*/
+/*@import url("http://serverapi.arcgisonline.com/jsapi/arcgis/3.3/js/esri/dijit/css/Popup.css");
+@import url("http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/themes/base/jquery-ui.css"); 
+@import url("http://serverapi.arcgisonline.com/jsapi/arcgis/3.3/js/esri/css/esri.css");*/
+/*@import url("http://serverapi.arcgisonline.com/jsapi/arcgis/3.3/js/dojo/dijit/themes/claro/claro.css");*/
+
+/** @import url("bootstrap/bootstrap.min.css");  **/
+/* line 4, ../sass/main.scss */
+body {
+  overflow-x: hidden;
+  
+}
+
+input {
+        display: block;
+        width: 100 % ;
+        min - height: 28px; - webkit - box - sizing: border - box; - moz - box - sizing: border - box; - ms - box - sizing: border - box;
+        box - sizing: border - box;
+		color:#333333;
+		font-family: Helvetica, Arial, sans-serif;
+
+    } 
+
+        input, input[type="text"], input[type="radio"], isindex, .uneditable-input {
+                padding: 5px;
+                border-bottom-width: 1px;
+                border-bottom-style: solid;
+                border-bottom-color: #CCC;
+                border-left-width: 1px;
+                border-left-style: solid;
+                border-left-color: #CCC;
+                border-right-width: 1px;
+                border-right-style: solid;
+                border-right-color: #CCC;
+                border-top-width: 1px;
+                border-top-style: solid;
+                border-top-color: #CCC;
+                border-top-left-radius: 3px;
+                border-top-right-radius: 3px;
+                border-bottom-left-radius: 3px;
+                border-bottom-right-radius: 3px;
+        }
+
+/**input: focus{
+        border - color: rgba(82, 168, 236, 0.8);
+        outline: 0;
+        outline: thin dotted\9; - webkit - box - shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075),
+        0 0 8px rgba(82, 168, 236, 0.6); - moz - box - shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075),
+        0 0 8px rgba(82, 168, 236, 0.6);
+        box - shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075),
+        0 0 8px rgba(82, 168, 236, 0.6);
+}**/
+
+
+
+
+.cnvMain{
+    position: absolute;
+	width:600px;
+	height: 420px;
+	padding: 0;
+	
+}
+
+.lookupDivCls{
+	position: absolute;
+	top: 0px;
+	left: 0px
+	height: 30px;
+	padding: 0;
+}
+
+.lookupBoxClass{
+  position: absolute;
+  width: 590px;
+  padding: 0;
+  display: inline-block;
+  z-index:100;
+}
+
+#lside-container{
+    position: absolute;
+	top:30px;
+    width: 250px;
+	height:400px;
+	bottom:0px;
+    background-color: lime;
+}
+
+#editor{
+	/*height: 100px;*/
+	overflow:scroll;
+}
+
+/*.esriAttributeInspector .atiField { 
+	background:#FFF6D9; 
+	font-size:10px;
+}
+.esriAttributeInspector .atiLabel { 
+	font-weight:bold; 
+	color:#705B35;
+	font-size:10px; 
+}
+*/
+
+#inspector{
+	/*width:250px;*/
+	height:280px;
+	overflow:scroll;
+}
+
+
+
+#main-container{
+    position: absolute;
+	top:30px;
+	left:250px;
+	width: 350px;
+	height:400px;
+	/*height: 476px;*/
+}
+
+.mapClass{
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	z-index:50;
+}
+
+.mapSwitcherDiv{
+	position:absolute; 
+	right:90px; 
+	top:10px; 
+	z-Index:101;
+}
+
+#mapSwitcher {
+	width: 40px;
+	border: 0px;
+	padding: 3px;
+	font-weight: bold;
+	opacity: 0.9;
+	outline-color:#00ff00;
+}
+
+label,select,.ui-select-menu { 
+	float: right; 
+	margin-right: 10px; 
+}
+
+a:hover{
+	color:#212121;
+	text-decoration:none;
+}
+		
+select { 
+	width: 120px; 
+}
+
+select .ui-state-hover a, .ui-state-hover a:hover { 
+	/*color: #ff0021{fcHover}*/; 
+	text-decoration: none; 
+}
+
+.wrap ul.ui-selectmenu-menu-popup li a { font-weight: bold; }
+
+.lookupSuggestions{
+	color:#333333;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size:14px;
+	line-height:22px;
+	text-indent:4px;
+	position:absolute;
+	display: block;
+	top: 30px;
+	width: 250px;
+	padding: 0px;
+	z-index:100;
+	left: 2px;
+	background-color: white;
+}
+
+.lookupHighlight{
+	background-color: grey;
+}
+
+.lookupSelection{
+	background-color:#CCCACB;
+}
+
+/* #lui{ */
+.lookupSelection.div{
+	height:20px;
+	vertical-align:middle;
+}
+
+/* line 7, ../sass/main.scss */
+.navbar {
+  margin-bottom: 0 !important;
+}
+/* line 9, ../sass/main.scss */
+.navbar .navbar-inner {
+  padding: 0 !important;
+}
+/* line 11, ../sass/main.scss */
+.navbar .navbar-inner div {
+  margin-left: 1em !important;
+}
+
+/* line 14, ../sass/main.scss */
+.map-slider {
+  width: 75%;
+  margin: auto;
+}
+
+/* line 19, ../sass/main.scss */
+#filter-result {
+  margin-top: 1em;
+  margin-right: 1em;
+}
+
+/* esri popup title link */
+/*.title a{
+	color:white;
+	}
+
+	*/
